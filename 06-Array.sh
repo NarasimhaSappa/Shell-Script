@@ -7,4 +7,4 @@ PERSONS=("Viswa" "Rajesh" "Narasimha")
 echo "First person:${PERSONS[0]}"
 
 #@Means all persons
-echo "First person:${PERSONS[@]}"
+echo "All person:${PERSONS[@]}"

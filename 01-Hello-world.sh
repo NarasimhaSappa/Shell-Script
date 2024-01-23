@@ -1,6 +1,11 @@
 #!/bin/bash
 echo "Hello World.I am learning Devops with AWS"
-echo "Ramesh: Hi suresh ,Good Morning"
-echo "Suresh: Good Morning Ramesh"
-echo "Ramesh: How are you Suresh"
-echo "Ramesh: I am good,How are you Murthy"
+
+PERSON1=Ramesh
+PERSON2=Suresh
+
+echo "$PERSON1: Hi,$PERSON2,Good Morning"
+echo "$PERSON2: Good Morning $PERSON1"
+echo "$PERSON1: How are you $PERSON2"
+echo "$PERSON2: I am good,How are you $PERSON1"
+

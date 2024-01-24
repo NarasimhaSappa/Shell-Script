@@ -16,7 +16,7 @@ fi
 
 }
 
-if [ $USERID -ne 0 ]
+if [ $? -ne 0 ]
 
 then 
     echo "Installation of My sql is error"

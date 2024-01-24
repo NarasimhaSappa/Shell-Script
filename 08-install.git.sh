@@ -2,7 +2,7 @@
 
 # This program goal is install to my sql
 
-USERID=$(id= -u)
+USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 

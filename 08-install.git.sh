@@ -22,3 +22,14 @@ then
 else
     echo "Installation my sql is sucess"
 fi
+
+# Installatio of postfix
+yum install postfix -y
+
+if [ $? -ne 0 ]
+then
+    echo "installation postfix is error"
+    exit1
+else
+    echo "Installlation postfix is success"
+fi

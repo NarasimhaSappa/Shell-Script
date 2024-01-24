@@ -1,7 +1,10 @@
 #!/bin/bash
+DATE=$(date +%F)
+LOGSDIR=/home/centos/shellscript-logs
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 USERID=$(id -u)
-
 #This function should validate and previous command inform to user it is sucess or falure
 
 VALIDATE(){
@@ -16,22 +19,18 @@ fi
 
 }
 
-if [ $? -ne 0 ]
+USERID=$(id -u)
 
-then 
-    echo "Installation of My sql is error"
-    exit 1
-else
-    echo "Installation my sql is success"
-fi
-
-# Installatio of postfix
-yum install postfix -y
-
-if [ $? -ne 0 ]
+if [ $USERID -ne 0 ]
 then
-    echo "installation postfix is error"
-    exit1
-else
-    echo "Installlation postfix is success"
+  echo "ERROR::Please run with root user"
+  exit1
+# else
+#   echo "you are the root user"
 fi
+
+# This is  our responsibility Again to check installation is success or not
+yum install mysql -y &>>$LOGFILE
+VALIDATE $? "Installing MySQL"
+yum install postfix -y &>>$LOGFILE
+VALIDATE $? "Installing Postfix"

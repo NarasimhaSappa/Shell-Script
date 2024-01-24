@@ -4,7 +4,7 @@
 
 USERID=$(id= -u)
 
-if [USERID -ne 0]
+if [ USERID -ne 0 ]
 
 then 
     echo "ERROR:Please run this root-access"
@@ -14,7 +14,7 @@ fi
 
 yum install mysql -y
 
-if [$? -ne 0]
+if [ $? -ne 0 ]
 
 then 
     echo "Installation of My sql is error"

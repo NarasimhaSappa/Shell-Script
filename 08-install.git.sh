@@ -12,4 +12,13 @@ then
     #echo "INFO:: You are root user"
 fi
 
-yum install git -y
+yum install mysql -y
+
+if [$? -ne 0]
+
+then 
+    echo "Installation of My sql is error"
+    exit 1
+else
+    echo "Installation my sql is sucess"
+fi

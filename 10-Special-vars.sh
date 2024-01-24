@@ -13,3 +13,4 @@ echo "all vars: $@"
 
 ## it will dissplay the count of variables 
 echo "number of vars: $#"
+

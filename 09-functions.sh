@@ -1,20 +1,22 @@
 #!/bin/bash
 
-# This program goal is install to my sql
-
 USERID=$(id -u)
 
-if [ $USERID -ne 0 ]
+#This function should validate and previous command inform to user it is sucess or falure
 
-then 
-    echo "ERROR:Please run this root-access"
-#else
-    #echo "INFO:: You are root user"
+VALIDATE(){
+            #$1--it will an argument
+if [ $1 -ne 0]
+
+then
+    echo "$2.....FAILURE"
+else
+    echo "$2.....SUCCESS"       
 fi
 
-yum install mysql -y
+}
 
-if [ $? -ne 0 ]
+if [ $USERID -ne 0 ]
 
 then 
     echo "Installation of My sql is error"

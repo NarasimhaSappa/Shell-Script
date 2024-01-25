@@ -6,7 +6,7 @@ echo 4
 echo 5
 
 #Create Loop example
-for i in {1..10}
+for i in {1..100}
 do
     echo $i
 done
